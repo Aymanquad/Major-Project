@@ -8,10 +8,12 @@
         <div class="col-12 my-auto">
             <div class="logo text-center mb-3"></div>
             <div class="width-400">
-                <video width="100%" controls id="videos">
-                    <source src="" id="video_source">
-                    Your browser does not support HTML5 video.
-                </video>
+                <div class="video-container">
+                    <video id="videos" controls preload="metadata" style="max-width: 100%; max-height: 240px;">
+                        <source src="" id="video_source">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
                 <form class="form" method="POST" enctype="multipart/form-data" name="video-upload" id="video-upload"
                     class="text-center mt-3">
                     {%csrf_token%}
